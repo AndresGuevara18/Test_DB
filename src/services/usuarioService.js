@@ -9,6 +9,7 @@ const usuarioService = {
         return results.map(row => new Usuario(row.id, row.nombre, row.email)); 
     },
 
+
     // Agregar un nuevo usuario
     agregarUsuario: async (nombre, email) => {
         const [result] = await db.promise().query(
@@ -58,12 +59,13 @@ module.exports = usuarioService;
 
 //node src/services/usuarioService.js
 
-/*obtenerUsuarios: () => {
-        return new Promise((resolve, reject) => {
-            const usuarios = [
-                { id: 1, nombre: "Juan Pérez", email: "juan@example.com" },
-                { id: 2, nombre: "Ana López", email: "ana@example.com" }
-            ];
-            resolve(usuarios); // Resolvemos la Promesa con los usuarios
-        });
-    } ,*/
+/*
+
+obtenerUsuarios: async () => {
+        return [
+            { id: 1, nombre: "Juan Pérez", email: "juan@example.com" },
+            { id: 2, nombre: "Ana López", email: "ana@example.com" }
+        ];
+    },
+
+*/

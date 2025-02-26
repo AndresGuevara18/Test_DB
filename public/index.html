@@ -52,3 +52,24 @@
 
 </body>
 </html>
+
+
+<!--
+document.addEventListener("DOMContentLoaded", () => {
+    const usuarios = [
+        { id: 1, nombre: "Juan Pérez", email: "juan@example.com" },
+        { id: 2, nombre: "Ana López", email: "ana@example.com" }
+    ];
+    const tabla = document.getElementById("usuariosTabla");
+
+    usuarios.forEach(usuario => {
+        const fila = document.createElement("tr");
+        fila.innerHTML = `
+            <td>${usuario.id}</td>
+            <td>${usuario.nombre}</td>
+            <td>${usuario.email}</td>
+        `;
+        tabla.appendChild(fila);
+    });
+});
+-->

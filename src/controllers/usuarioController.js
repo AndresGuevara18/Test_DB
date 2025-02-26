@@ -10,8 +10,10 @@ const usuarioController = {
     obtenerUsuarios: async (req, res) => {//permiten manejar funciones asíncronas
         try {
             const usuarios = await usuarioService.obtenerUsuarios();
+            //console.log("Usuarios obtenidos:", usuarios); //TD Log para ver si llega la data
             res.json(usuarios);
         } catch (error) {
+            console.error("Error obteniendo usuarios:", error); // TD Log para errore
             res.status(500).json({ error: error.message });
         }
     },
