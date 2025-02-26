@@ -1,0 +1,42 @@
+CREATE DATABASE test_db;
+USE test_db;
+
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL
+);
+
+INSERT INTO usuarios (nombre, email) VALUES 
+('Juan Pérez', 'juan@example.com'),
+('Ana López', 'ana@example.com'),
+('Carlos Ramírez', 'carlos@example.com'),
+('María Fernández', 'maria@example.com'),
+('Luis Gómez', 'luis@example.com');
+
+
+/*
+puebas thunder
+
+obtener usuario 
+/usuarios
+
+
+agregar
+
+{
+    "nombre": "Pedro Sánchez",
+    "email": "pedro@example.com"
+}
+
+actualizar
+
+{
+    "nombre": "Pedro Sánchez Actualizado",
+    "email": "pedro.new@example.com"
+}
+
+
+
+
+*/
