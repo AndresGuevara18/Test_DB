@@ -15,6 +15,7 @@ const usuarioController = {
             res.status(500).json({ error: error.message });
         }
     },
+   
 
     //(SÍ usa req.body porque recibe datos del cliente)
     // Agregar un nuevo usuario
@@ -53,3 +54,21 @@ const usuarioController = {
 };
 
 module.exports = usuarioController;
+
+
+//node src/controller/db.js
+
+/*obtenerUsuarios: async (req, res) => {
+        try {
+            // `await` espera la respuesta de usuarioService.obtenerUsuarios()
+            const usuarios = await usuarioService.obtenerUsuarios();
+            
+            // Cuando la Promesa se resuelve, enviamos la respuesta en JSON
+            res.json(usuarios);
+        } catch (error) {
+            // Capturamos cualquier error y enviamos un mensaje de error
+            res.status(500).json({ error: error.message });
+        }
+    },
+
+*/
